@@ -1,0 +1,99 @@
+# Nmap 7.93 scan initiated Sun Jun 21 01:27:28 2026 as: nmap -sV -sC -p- -oN scan_web01.txt 172.16.10.10
+Nmap scan report for 172.16.10.10
+Host is up (0.00032s latency).
+Not shown: 65534 closed tcp ports (conn-refused)
+PORT     STATE SERVICE          VERSION
+8081/tcp open  blackice-icecap?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 NOT FOUND
+|     Server: Werkzeug/3.0.1 Python/3.12.3
+|     Date: Sun, 21 Jun 2026 06:27:42 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 207
+|     Connection: close
+|     <!doctype html>
+|     <html lang=en>
+|     <title>404 Not Found</title>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: Werkzeug/3.0.1 Python/3.12.3
+|     Date: Sun, 21 Jun 2026 06:27:42 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 7176
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+|     <meta name="description" content="Simple landind page" />
+|     <meta name="keywords" content="" />
+|     <meta name="author" content="" />
+|     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+|     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+|     <style>
+|     .gradient {
+|     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+|     </style>
+|     </head>
+|     <body class="leading-normal tracking-normal text
+|   SIPOptions: 
+|     <!DOCTYPE HTML>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request version ('SIP/2.0').</p>
+|     <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8081-TCP:V=7.93%I=7%D=6/21%Time=6A37845E%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,1CB7,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/3\.0\.1\x2
+SF:0Python/3\.12\.3\r\nDate:\x20Sun,\x2021\x20Jun\x202026\x2006:27:42\x20G
+SF:MT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x
+SF:207176\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang
+SF:=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"UTF-8\"\x2
+SF:0/>\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devi
+SF:ce-width,\x20initial-scale=1\.0\"\x20/>\n\x20\x20\x20\x20<meta\x20http-
+SF:equiv=\"X-UA-Compatible\"\x20content=\"ie=edge\"\x20/>\n\x20\x20\x20\x2
+SF:0<meta\x20name=\"description\"\x20content=\"Simple\x20landind\x20page\"
+SF:\x20/>\n\x20\x20\x20\x20<meta\x20name=\"keywords\"\x20content=\"\"\x20/
+SF:>\n\x20\x20\x20\x20<meta\x20name=\"author\"\x20content=\"\"\x20/>\n\x20
+SF:\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"https://unpkg\.com/ta
+SF:ilwindcss@2\.2\.19/dist/tailwind\.min\.css\"/>\n\x20\x20\x20\x20<link\x
+SF:20href=\"https://fonts\.googleapis\.com/css\?family=Source\+Sans\+Pro:4
+SF:00,700\"\x20rel=\"stylesheet\"\x20/>\n\x20\x20\x20\x20<style>\n\x20\x20
+SF:\x20\x20\x20\x20\.gradient\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20backgr
+SF:ound:\x20linear-gradient\(90deg,\x20#d53369\x200%,\x20#daae51\x20100%\)
+SF:;\n\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20</style>\n\x20\x20</head>
+SF:\n\x20\x20<body\x20class=\"leading-normal\x20tracking-normal\x20text")%
+SF:r(FourOhFourRequest,184,"HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nServer:\x2
+SF:0Werkzeug/3\.0\.1\x20Python/3\.12\.3\r\nDate:\x20Sun,\x2021\x20Jun\x202
+SF:026\x2006:27:42\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\
+SF:r\nContent-Length:\x20207\r\nConnection:\x20close\r\n\r\n<!doctype\x20h
+SF:tml>\n<html\x20lang=en>\n<title>404\x20Not\x20Found</title>\n<h1>Not\x2
+SF:0Found</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\x20on\x2
+SF:0the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20manually\x20p
+SF:lease\x20check\x20your\x20spelling\x20and\x20try\x20again\.</p>\n")%r(S
+SF:IPOptions,16B,"<!DOCTYPE\x20HTML>\n<html\x20lang=\"en\">\n\x20\x20\x20\
+SF:x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20<title>Error\x20response</title>\n\x20
+SF:\x20\x20\x20</head>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20<h1>Error\x20response</h1>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Er
+SF:ror\x20code:\x20400</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Message:\x2
+SF:0Bad\x20request\x20version\x20\('SIP/2\.0'\)\.</p>\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20<p>Error\x20code\x20explanation:\x20400\x20-\x20Bad\x20req
+SF:uest\x20syntax\x20or\x20unsupported\x20method\.</p>\n\x20\x20\x20\x20</
+SF:body>\n</html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jun 21 01:29:04 2026 -- 1 IP address (1 host up) scanned in 95.95 seconds
